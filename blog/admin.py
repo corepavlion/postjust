@@ -17,6 +17,7 @@ class BlogPostAdmin(admin.ModelAdmin):
         (None,		{'fields': ['title', 'slug','teaser', 'content','categories']}),
         ('Published Information', {'fields': ['date','published']}),
     ]
+    search_fields = ['title','date']
     list_display = ('title', 'published', 'date')
 
 admin.site.register(BlogPost, BlogPostAdmin)
