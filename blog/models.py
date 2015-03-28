@@ -17,7 +17,18 @@ class BlogPost(models.Model):
 	teaser = models.TextField(blank=True)
 	content = models.TextField()
 	date = models.DateTimeField('Publised Date', default = timezone.now())
-	categories = models.ManyToManyField(BlogCategory,blank=True, null=True,)
+	categories = models.ManyToManyField(BlogCategory,blank=True, null=True)
 	def __str__(self):
    	    return self.title
+
+class Page(models.Model):
+	title = models.CharField(max_length=500)
+	slug = models.SlugField(unique=True)
+	published = models.BooleanField(default=True)
+	content = models.TextField()
+	date = models.DateTimeField('Publised Date', default = timezone.now())
+	categories = models.ManyToManyField(BlogCategory,blank=True, null=True)
+	def __str__(self):
+   	    return self.title
+
 

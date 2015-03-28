@@ -1,14 +1,33 @@
 from django.contrib import admin
 from blog.models import BlogPost
 from blog.models import BlogCategory
+from blog.models import Page
 
 class BlogCategoryAdmin(admin.ModelAdmin):
-    fields = ['title', 'slug', 'published', 'date']
+    fieldsets = [
+        (None,               {'fields': ['title', 'slug']}),
+        ('Published Information', {'fields': ['date','published']}),
+    ]
+    list_display = ('title', 'published', 'date')
 
 admin.site.register(BlogCategory, BlogCategoryAdmin)
 
 class BlogPostAdmin(admin.ModelAdmin):
-    fields = ['title', 'slug', 'teaser', 'content', 'published', 'categories', 'date']
+    fieldsets = [
+        (None,		{'fields': ['title', 'slug','teaser', 'content','categories']}),
+        ('Published Information', {'fields': ['date','published']}),
+    ]
+    list_display = ('title', 'published', 'date')
 
 admin.site.register(BlogPost, BlogPostAdmin)
+
+
+class PageAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['title', 'slug', 'content','categories']}),
+        ('Published Information', {'fields': ['date','published']}),
+    ]
+    list_display = ('title', 'published', 'date')
+
+admin.site.register(Page, PageAdmin)
 
