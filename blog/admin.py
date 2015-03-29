@@ -1,7 +1,7 @@
 from django.contrib import admin
 from blog.models import BlogPost
 from blog.models import BlogCategory
-from blog.models import Page
+
 
 class BlogCategoryAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -21,14 +21,3 @@ class BlogPostAdmin(admin.ModelAdmin):
     list_display = ('title', 'published', 'date')
 
 admin.site.register(BlogPost, BlogPostAdmin)
-
-
-class PageAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,               {'fields': ['title', 'slug', 'content','categories']}),
-        ('Published Information', {'fields': ['date','published']}),
-    ]
-    list_display = ('title', 'published', 'date')
-
-admin.site.register(Page, PageAdmin)
-
