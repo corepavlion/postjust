@@ -15,3 +15,4 @@ def page(request, slug):
 	#return HttpResponse('asdsad')
 
 
+
