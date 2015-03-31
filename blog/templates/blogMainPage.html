@@ -1,0 +1,6 @@
+{% for post in postList %}
+        <li>
+        <a href="/blog/{{ post.slug }}/">{{ post.title }}</a>
+        <a href="/blog/{{ post.slug }}/">{{ post.teaser }}</a>
+        </li>
+{% endfor %}
