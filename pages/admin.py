@@ -1,6 +1,7 @@
 from django.contrib import admin
 from pages.models import Page
-
+from django.db import models
+from tinymce.models import HTMLField
 
 class PageAdmin(admin.ModelAdmin):
     fieldsets = [
