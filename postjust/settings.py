@@ -23,7 +23,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','.postjust.herokuapp.com/','.erkandemir.net']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
