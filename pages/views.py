@@ -8,7 +8,7 @@ from pages.models import Page
 
 def mainpage(request):
 	try:
-		currentPage = Page.objects.get(title = "About Me")
+		currentPage = Page.objects.get(title = "homepage")
 		return render(request, 'index.html', {'mainPage' : currentPage})
 	except Page.DoesNotExist:
 		return HttpResponse('main page')
