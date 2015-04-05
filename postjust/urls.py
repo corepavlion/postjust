@@ -9,7 +9,8 @@ urlpatterns = patterns('',
 	url(r'^$', views.mainpage, name ='mainPage'),
 	url(r'^page/', include(pages.urls)),
 	url(r'^blog/', include(blog.urls)),
- 	url(r'^admin/', include(admin.site.urls))
+ 	url(r'^admin/', include(admin.site.urls)),
+ 	(r'^tinymce/', include('tinymce.urls')),
 )
 
 

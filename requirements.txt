@@ -1,7 +1,8 @@
 Django==1.7.7
 django-extensions==1.5.2
-
-#development
+django-tinymce==1.5.3
+gnureadline==6.3.3
 ipdb==0.8
 ipython==3.0.0
-
+six==1.9.0
+Werkzeug==0.10.4

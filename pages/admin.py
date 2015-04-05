@@ -1,6 +1,7 @@
 from django.contrib import admin
 from pages.models import Page
 
+
 class PageAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['title', 'slug', 'content']}),

@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_extensions',
     'blog',
-    'pages'
+    'pages',
+    'tinymce'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,6 +49,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'pages.context_processors.pages'
 )
 
 ROOT_URLCONF = 'postjust.urls'
@@ -78,7 +84,8 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-STATIC_URL = '/static/'
+STATIC_ROOT = '/assests/'
+STATIC_URL = '/assets/'

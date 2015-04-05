@@ -1,6 +1,10 @@
-{% for post in postList %}
-        <li>
-        <a href="{% url 'blogDetailPage' post.slug %}">{{ post.title }}</a>
-        <a href="{% url 'blogDetailPage' post.slug %}">{{ post.teaser }}</a>
-        </li>
-{% endfor %}
+{% extends "base.html" %}
+
+{% block content %}
+	{% for post in postList %}
+	        <li>
+	        <a href="{% url 'blogDetailPage' post.slug %}">{{ post.title }}</a>
+	        <a href="{% url 'blogDetailPage' post.slug %}">{{ post.teaser }}</a>
+	        </li>
+	{% endfor %}
+{% endblock %}
