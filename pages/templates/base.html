@@ -32,11 +32,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-			{% for page in pages %}
+			     {% for page in pages %}
+            {%if page.title not 'homepage':%}
 			        <li>
 			         <a href="{% url 'page' page.slug %}">{{ page.title }}</a>
 			        </li>
-			{% endfor %}
+              {%endif %}
+			     {% endfor %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
