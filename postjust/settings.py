@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'jb-@(98(ew4kkociwv+2y(3799r*vug7-$g)e=6wsxigrk30=!'
 
 # SECURITY WARNING: don't run with debug turned on in produ1ction!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = False
 
@@ -93,9 +93,9 @@ USE_TZ = True
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = '/postjust/static/'
-# STATIC_URL = '/postjust/static/'
+STATIC_ROOT = '/static/'
+STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
