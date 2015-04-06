@@ -93,9 +93,9 @@ USE_TZ = True
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = '/postjust/static/'
-STATIC_URL = '/postjust/static/'
+# STATIC_ROOT = '/postjust/static/'
+# STATIC_URL = '/postjust/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
