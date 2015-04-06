@@ -1,0 +1,209 @@
+[06/Apr/2015 12:53:39] ERROR [django.request:231] Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 1136, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_static.py", line 17, in static
+    return _static(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 128, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 277, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 91, in hashed_name
+    (clean_name, self))
+ValueError: The file 'admin/css/base.css' could not be found with <whitenoise.django.GzipManifestStaticFilesStorage object at 0x1084f3b10>.
+[06/Apr/2015 12:54:18] DEBUG [django.db.backends:91] (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s) LIMIT 21' - PARAMS = (u'0iz0rkyrct849mvlheds3k9mcmdi2dh5', u'2015-04-06 12:54:18.323403'); args=('0iz0rkyrct849mvlheds3k9mcmdi2dh5', u'2015-04-06 12:54:18.323403')
+[06/Apr/2015 12:54:18] DEBUG [django.db.backends:91] (0.000) QUERY = u'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = %s LIMIT 21' - PARAMS = (1,); args=(1,)
+[06/Apr/2015 12:54:18] DEBUG [django.db.backends:91] (0.001) QUERY = u'SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined", "django_content_type"."id", "django_content_type"."name", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auth_user" ON ( "django_admin_log"."user_id" = "auth_user"."id" ) LEFT OUTER JOIN "django_content_type" ON ( "django_admin_log"."content_type_id" = "django_content_type"."id" ) WHERE "django_admin_log"."user_id" = %s ORDER BY "django_admin_log"."action_time" DESC LIMIT 10' - PARAMS = (1,); args=(1,)
+[06/Apr/2015 12:54:18] WARNING [django.request:143] Not Found: /static/admin/css/base.css
+[06/Apr/2015 12:54:18] WARNING [django.request:143] Not Found: /static/admin/css/dashboard.css
+[06/Apr/2015 13:00:24] ERROR [django.request:231] Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 1136, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_static.py", line 17, in static
+    return _static(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 128, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 277, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 91, in hashed_name
+    (clean_name, self))
+ValueError: The file 'admin/css/base.css' could not be found with <whitenoise.django.GzipManifestStaticFilesStorage object at 0x103c7a690>.
+[06/Apr/2015 13:00:43] ERROR [django.request:231] Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 1136, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_static.py", line 17, in static
+    return _static(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 128, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 277, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 91, in hashed_name
+    (clean_name, self))
+ValueError: The file 'admin/css/base.css' could not be found with <whitenoise.django.GzipManifestStaticFilesStorage object at 0x1101e6650>.
+[06/Apr/2015 13:01:11] ERROR [django.request:231] Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/core/handlers/base.py", line 137, in get_response
+    response = response.render()
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 103, in render
+    self.content = self.rendered_content
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/response.py", line 80, in rendered_content
+    content = template.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 148, in render
+    return self._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 126, in render
+    return compiled_parent._render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+    return self.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+    bit = self.render_node(node, context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 858, in render_node
+    return node.render(context)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/template/base.py", line 1136, in render
+    return func(*resolved_args, **resolved_kwargs)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/admin/templatetags/admin_static.py", line 17, in static
+    return _static(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 128, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 277, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/Users/erkan/Dev/Python/virtualenvs/postjust/lib/python2.7/site-packages/django/contrib/staticfiles/storage.py", line 91, in hashed_name
+    (clean_name, self))
+ValueError: The file 'admin/css/base.css' could not be found with <whitenoise.django.GzipManifestStaticFilesStorage object at 0x1101e6650>.
