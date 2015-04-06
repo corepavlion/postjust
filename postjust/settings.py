@@ -70,8 +70,8 @@ DATABASES = {
     }
 }
 
-# import dj_database_url
-# DATABASES['default'] =  dj_database_url.config()
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -93,7 +93,7 @@ USE_TZ = True
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = '/static/'
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
