@@ -18,12 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'jb-@(98(ew4kkociwv+2y(3799r*vug7-$g)e=6wsxigrk30=!'
 
-# SECURITY WARNING: don't run with debug turned on in produ1ction!
-DEBUG = False
 
-TEMPLATE_DEBUG = False
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -60,18 +55,7 @@ ROOT_URLCONF = 'postjust.urls'
 
 WSGI_APPLICATION = 'postjust.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -144,3 +128,8 @@ LOGGING = {
        
     }
 }
+
+try:
+    from settings_local import *
+except ImportError as e:
+    from settings_prod import *
