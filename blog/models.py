@@ -8,6 +8,9 @@ class BlogCategory(models.Model):
     date = models.DateTimeField('Published Date', default = timezone.now())
     def __str__(self):
         return self.title
+	def getPostCount(self):
+		return self.blogpost_set.count()
+		
 
 
 class BlogPost(models.Model):
