@@ -9,7 +9,7 @@ class BlogCategory(models.Model):
     def __str__(self):
         return self.title
     def getPostCount(self):
-		return self.blogpost_set.count()
+        return self.blogpost_set.count()
 		
 
 
