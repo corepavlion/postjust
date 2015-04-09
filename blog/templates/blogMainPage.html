@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{% extends "blogBase.html" %}
 
-{% block content %}
+{% block content_blog %}
 	{% for post in postList %}
 	        <li>
 	        <a href="{% url 'blogDetailPage' post.slug %}">{{ post.title }}</a>

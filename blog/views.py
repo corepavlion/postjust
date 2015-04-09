@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 def blogPostList(request):
 	postList = BlogPost.objects.all().order_by('-id')[:5]
+		#c.blogpost_set.all().count()
 	return render(request, 'blogMainPage.html', {'postList' : postList})
 
 def blogDetailPage(request, slug):

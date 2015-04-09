@@ -136,9 +136,11 @@ LOGGING = {
             'propagate': True,
             'level':'ERROR',
         },
-        'MYAPP': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
+        'django.db': {
+            'handlers':['console'],
+            'propagate': True,
+            'level':'DEBUG',
+        }
+       
     }
 }
