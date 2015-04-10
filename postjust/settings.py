@@ -18,9 +18,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'jb-@(98(ew4kkociwv+2y(3799r*vug7-$g)e=6wsxigrk30=!'
 
-
-
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -33,8 +30,8 @@ INSTALLED_APPS = (
     'django_extensions',
     'blog',
     'pages',
-    'tinymce',
-    'debug_toolbar'
+    'tinymce'
+
 )
 
 MIDDLEWARE_CLASSES = (
