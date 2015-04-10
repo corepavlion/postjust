@@ -33,7 +33,8 @@ INSTALLED_APPS = (
     'django_extensions',
     'blog',
     'pages',
-    'tinymce'
+    'tinymce',
+    'debug_toolbar'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,6 +51,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'pages.context_processors.pages'
 )
+
+
 
 ROOT_URLCONF = 'postjust.urls'
 
@@ -87,6 +90,9 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': "advanced",
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
+    'skin' : "o2k7",
+    'width' : "100%",
+    'height' : "600px"
 }
 TINYMCE_SPELLCHECKER = False
 TINYMCE_COMPRESSOR = True
@@ -95,39 +101,7 @@ TINYMCE_COMPRESSOR = True
 #     os.path.join(BASE_DIR, 'static'),
 # )
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
-        },
-    },
-    'loggers': {
-        'django.request': {
-            'handlers':['console'],
-            'propagate': True,
-            'level':'ERROR',
-        },
-        'django.db': {
-            'handlers':['console'],
-            'propagate': True,
-            'level':'DEBUG',
-        }
-       
-    }
-}
+
 
 try:
     from settings_local import *
