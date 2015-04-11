@@ -9,7 +9,7 @@
 				{% for cat in categories %}
 				  <li class="list-group-item">
 				    <span class="badge">{{cat.getPostCount}}</span>
-				   {{cat.title}}
+				   <a href='{% url 'blogPostByCategory' cat.slug %}'> {{cat.title}}</a>
 				  </li>
 			  	{% endfor %}
 			</ul>

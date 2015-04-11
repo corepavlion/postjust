@@ -3,6 +3,7 @@ from django.contrib import admin
 import blog.urls
 import pages.urls
 from pages import views
+from django.conf import settings
 
 urlpatterns = patterns('',
 	#url(r'^$',include(pages.urls)),
@@ -14,3 +15,8 @@ urlpatterns = patterns('',
 )
 
 
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns += patterns('',
+        url(r'^__debug__/', include(debug_toolbar.urls)),
+    )
