@@ -31,8 +31,6 @@ INSTALLED_APPS = (
     'blog',
     'pages',
     'tinymce',
-    'pylint'
-
 )
 
 MIDDLEWARE_CLASSES = (
