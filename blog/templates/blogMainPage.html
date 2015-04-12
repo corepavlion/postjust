@@ -5,7 +5,7 @@
 
 	{% for post in postList %}
 	<li>
-		{{post.title}}
+	<a href='{% url 'blogPostDetail' post.slug %}'>{{post.title}}</a>
 	</li>
 	{% endfor %}
 </ul>

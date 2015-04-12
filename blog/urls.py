@@ -3,8 +3,6 @@ from blog import views
 
 urlpatterns = patterns('',
 	url(r'^$', views.blogPostList, name ='blogPostList'),
-	url(r'^(?P<category>\S+)/(?P<slug>\S+)/$', views.blogDetail, name ='blogPostDetail'),
-	url(r'^(?P<category>\S+)/$', views.blogPostListByCategory, name ='blogPostByCategory'),
-
-
-)
+	url(r'^category/(?P<category>\S+)/$', views.blogPostListByCategory, name ='blogPostByCategory'),
+	url(r'^(?P<blog_slug>\S+)/$', views.blogDetail, name ='blogPostDetail')
+	)
