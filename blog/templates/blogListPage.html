@@ -3,7 +3,7 @@
 {% block content_blog %}
 
 	{% for post in postList %}
-	<div class="panel panel-default">
+	<div class="panel panel-warning">
 	  	<div class="panel-heading">
 	    	<h3 class="panel-title">	<a href='{% url 'blogPostDetail' post.slug %}'>{{post.title}}</a>
 				<span style="float:right"> {{post.date|date:"d-m-Y"}} </span>
@@ -12,15 +12,8 @@
   		<div class="panel-body">
 			<a href='{% url 'blogPostDetail' post.slug %}'  style='color:#777'>{{post.teaser}}</a>
   		</div>
-		<div class='panel-body' style="padding-top:6px;padding-bottom:4px; border-top:1px solid #eee">
-
-				<span class='label label-primary' style='float:left'>Categories:
-					{%for cat in blog_categories%}
-						{{cat.title}}
-					{% endfor %}
-				</span>
-
-			<span class='badge'  style='float:right'>Author:Erkan</span>
+		<div class='panel-body' style="padding-top:6px;padding-bottom:4px;">
+			<span class='badge'  style='float:right'>Author: Erkan</span>
 		</div>
 	</div>
 
