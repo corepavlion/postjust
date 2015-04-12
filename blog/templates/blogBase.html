@@ -1,9 +1,9 @@
 {% extends "base.html" %}
  {% block content %}
 	<div class="row">
-		<div class="col-md-8">
-	 {% block content_blog %}{% endblock %}
-	</div>
+		<div class="col-md-8 blogPosts">
+           {% block content_blog %}{% endblock %}
+	   </div>
 		<div class="col-md-4">
 			<ul class="list-group">
 				{% for cat in categories %}

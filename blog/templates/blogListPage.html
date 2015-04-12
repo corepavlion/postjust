@@ -1,11 +1,17 @@
 {% extends "blogBase.html" %}
 
 {% block content_blog %}
-<ul>
+
 	{% for post in postList %}
-	        <li>
-				<a href='{% url 'blogPostDetail' post.slug %}'>{{post.title}}</a>
-	        </li>
+	<div class="panel panel-default">
+	  	<div class="panel-heading">
+	    	<h3 class="panel-title">	<a href='{% url 'blogPostDetail' post.slug %}'>{{post.title}}</a> {{post.date}}</h3>
+	  	</div>
+  		<div class="panel-body">
+			<a href='{% url 'blogPostDetail' post.slug %}'>{{post.teaser}}</a>
+  		</div>
+	</div>
+
 	{% endfor %}
-	</ul>
+
 {% endblock %}

@@ -1,12 +1,13 @@
 {% extends "blogBase.html" %}
 
 {% block content_blog %}
-<ul>
-
-	{% for post in postList %}
-	<li>
-	<a href='{% url 'blogPostDetail' post.slug %}'>{{post.title}}</a>
-	</li>
-	{% endfor %}
-</ul>
+<div class='blog-list'>
+	<ul>
+		{% for post in postList %}
+		<li>
+		<a href='{% url 'blogPostDetail' post.slug %}'> {{post.title}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
 {% endblock %}
