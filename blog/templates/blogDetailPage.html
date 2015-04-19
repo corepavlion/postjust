@@ -1,11 +1,34 @@
 {% extends "blogBase.html" %}
 
 {% block content_blog %}
-<div class='title'>
-{{post.title}}
+
+  <div style='font-size:20px'>{{post.title}}</div>
+<hr>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+      {{post.content}}
+  </div>
+
 </div>
 
-<div class='content'>
-{{post.content}}
+
+
+<div>
+
+    {% for cat in blog_categories %}
+    <span style="float:left">
+        <span class='label label-primary' style="float:left">
+            <a style='color:#fff' href='{% url 'blogPostByCategory' cat.slug %}'> {{cat.title}}</a>
+        </span>
+
+    </span>
+    {%endfor%}
+
+   <span style="float:right">
+       {{post.date|date:"d-m-Y"}}
+  </span>
 </div>
+
+
 {% endblock %}
