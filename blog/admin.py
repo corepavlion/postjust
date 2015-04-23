@@ -1,6 +1,8 @@
 from django.contrib import admin
 from blog.models import BlogPost
 from blog.models import BlogCategory
+from django.db import models
+from tinymce.models import HTMLField
 
 
 class BlogCategoryAdmin(admin.ModelAdmin):
@@ -19,5 +21,6 @@ class BlogPostAdmin(admin.ModelAdmin):
     ]
     search_fields = ['title','date']
     list_display = ('title', 'published', 'date')
+    content = HTMLField()
 
 admin.site.register(BlogPost, BlogPostAdmin)

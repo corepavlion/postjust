@@ -1,5 +1,57 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class='row'>
+	<div class='col-xs-12'>
 	{{ mainPage.content }}
+	</div>
+</div>
+
+	<div class='row'>
+		<div class='col-xs-4'>
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">My Blog</h3>
+			  </div>
+			  <div class="panel-body">
+				<p>
+					I'm sharing to my experince in my blog.
+				</p>
+				<button type="button" class="btn btn-primary" aria-label="Left Align">
+  					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					<a style="color:#fff" href='/blog'>Blog</a>
+				</button>
+			  </div>
+			</div>
+		</div>
+
+		<div class='col-xs-4'>
+			<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h3 class="panel-title">Contact Me</h3>
+			</div>
+			<div class="panel-body">
+				<p>Mail : erkandemir86(at)gmail</p>
+				<p>Twitter : twitter.com/Gurrree</p>
+				<p>Facebook : facebook.com/erk.demir</p>
+				<p>LinkedIn : tr.linkedin.com/in/erkdmr</p>
+				<p>Git : github.com/erkandemir</p>
+			</div>
+			</div>
+		</div>
+
+		<div class='col-xs-4'>
+			<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"></h3>
+			</div>
+			<div class="panel-body">
+
+			</div>
+			</div>
+		</div>
+
+	</div>
+
 {% endblock %}

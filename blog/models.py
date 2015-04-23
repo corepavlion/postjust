@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from tinymce.models import HTMLField
 
 class BlogCategory(models.Model):
     title = models.CharField('Title', max_length=250)
@@ -17,7 +18,7 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True)
     published = models.BooleanField(default=True)
     teaser = models.TextField(blank=True)
-    content = models.TextField()
+    content = HTMLField()
     date = models.DateTimeField('Publised Date', default = timezone.now())
     categories = models.ManyToManyField(BlogCategory,blank=True, null=False)
     def __str__(self):

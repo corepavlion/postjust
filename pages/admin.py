@@ -10,8 +10,6 @@ class PageAdmin(admin.ModelAdmin):
     ]
     list_display = ('title', 'published', 'date')
     content = HTMLField()
-  
+
 
 admin.site.register(Page, PageAdmin)
-
-
