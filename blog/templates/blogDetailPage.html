@@ -2,20 +2,14 @@
 
 {% block content_blog %}
 
-  <div style='font-size:20px'>{{post.title}}</div>
-<hr>
+ <h1>{{post.title}}</h1>
+ <hr>
 
-<div class="panel panel-default">
-  <div class="panel-body">
-      {{post.content}}
-  </div>
 
-</div>
-
+  {{post.content}}
 
 
 <div>
-
     {% for cat in blog_categories %}
     <span style="float:left">
         <span class='label label-primary' style="float:left">
