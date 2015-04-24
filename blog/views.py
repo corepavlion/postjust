@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def blogPostList(request):
-	postList = BlogPost.objects.all().order_by('-id')[:5]
+	postList = BlogPost.objects.all().order_by('-id')
 	categories = getCategories()
 	return render(request, 'blogMainPage.html',
 		{'postList' : postList, 'categories' : categories})
