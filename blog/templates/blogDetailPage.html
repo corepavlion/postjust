@@ -1,5 +1,7 @@
 {% extends "blogBase.html" %}
-
+{%block title%}
+ | {{post.title}}
+ {%endblock%}
 {% block content_blog %}
 
  <h1>{{post.title}}</h1>
