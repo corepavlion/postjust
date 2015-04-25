@@ -1,2 +1,2 @@
 # postjust
-postjust is a web blog by django.
+postjust is a web blog and basic content management application by django.
