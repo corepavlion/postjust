@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'blog',
     'pages',
     'tinymce',
+    'pylint',
     'debug_toolbar'
 
 )
