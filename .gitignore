@@ -1,4 +1,3 @@
 *.pyc
 /db.sqlite3
 /static
-/postjust/settings_local.py
