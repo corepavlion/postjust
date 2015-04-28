@@ -38,7 +38,7 @@
 			<div class="panel-body">
 				<ul>
 				{% for post in lastBlogPosts %}
-					<li><a href='{% url 'blogPostDetail' post.slug %}'> {{post.title}}</a></li>
+					<li style='margin:2px 0 2px 2px;-webkit-padding-start:10px'><a href='{% url 'blogPostDetail' post.slug %}'> {{post.title}}</a></li>
 				{%endfor%}
 				</ul>
 			</div>
