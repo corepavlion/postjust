@@ -1,4 +1,4 @@
-{% extends "blogBase.html" %}
+{% extends "blogbase.html" %}
 {%block title%}
  | {{post.title}}
  {%endblock%}
@@ -14,15 +14,15 @@
 <div>
     {% for cat in blog_categories %}
     <span style="float:left">
-        <span class='label label-primary' style="float:left">
-            <a style='color:#fff' href='{% url 'blogPostByCategory' cat.slug %}'> {{cat.title}}</a>
+          <span class='label label-primary' style="float:left">
+            <a style='color:#fff' href='{% url 'blogpostbycategory' cat.slug %}'> {{cat.title}}</a>
         </span>
 
     </span>
     {%endfor%}
 
    <span style="float:right">
-       {{post.date|date:"d-m-Y"}}
+       {{post.date|date:"d-m-y"}}
   </span>
 </div>
 
