@@ -16,7 +16,7 @@
     {% for cat in blog_categories %}
     <span style="float:left">
           <span class='label label-primary' style="float:left">
-            <a style='color:#fff' href='{% url 'blogpostbycategory' cat.slug %}'> {{cat.title}}</a>
+            <a style='color:#fff' href='{% url 'blogPostByCategory' cat.slug %}'> {{cat.title}}</a>
         </span>
 
     </span>
