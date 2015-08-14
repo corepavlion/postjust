@@ -9,7 +9,7 @@
     <meta name='keywords' content="erkan demir, programming blog, django, python, javascript, c#">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/assets/css/main.css" />
+    <link rel="stylesheet" href="{%static 'css/main.css'%}" />
 
     <title>Erkan Demir {% block title %}{% endblock %}</title>
 
@@ -58,7 +58,7 @@
 <div class="row" style="margin-top:12px">
   <div class="col-xs-6"><p class="text_muted">Powered by <a href='https://github.com/erkandemir/postjust' target="_blank">Postjust</a></p></div>
   <div class="col-xs-6" style='text-align:right'>
-      <a href=''><img src='/static/assets/images/bootstrap.png' style='height:35px;margin-right:10px'/></a>
+      <a href=''><img src="{%static 'images/bootstrap.png' %}" style='height:35px;margin-right:10px'/></a>
       <a href="http://www.djangoproject.com/"  target="_blank" style="float: right"><img src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
 
   </div>
