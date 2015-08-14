@@ -77,7 +77,7 @@ USE_TZ = True
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'static'
-STATIC_URL = '/static/assets/'
+STATIC_URL = '/static/'
 
 
 TINYMCE_JS_URL = '/static/tiny_mce/tiny_mce_src.js'

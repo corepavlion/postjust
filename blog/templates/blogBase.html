@@ -1,3 +1,4 @@
+{% load staticfiles %}
 {% extends "base.html" %}
  {% block content %}
 	<div class="row">
@@ -17,8 +18,8 @@
 			  	{% endfor %}
 			</ul>
             <a style='display:block; text-align:center' target='_blank' href='http://github.com/erkandemir'>
-                <img src='/static/assets/images/github-logo.png' width='150' style='margin:auto' />
-                <img src='/static/assets/images/python-logo.png' width='150' style='margin:auto' />
+                <img src='{% static "images/my_app/myexample.jpg" %}' width='150' style='margin:auto' />
+                <img src='{% static "images/python-logo.png"}' width='150' style='margin:auto' />
             </a>
 
 		</div>
